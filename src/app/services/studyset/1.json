@@ -1,70 +1,71 @@
 {
-    quiz_title:"Months",
-    terms:[{
+	"quiz_title": "Months",
+	"terms": [{
 
-	id:1,
-    term: "January",
-    definition: "it's the first month of the year."
-},
-{
-	
-    id:2,
-    term:"February",
-    definition:"it's the third month of the year."
-},
-{
-	id:3,
-    term: "March",
-    definition: "First month of the year"
-},
-{
-	
-    id: 4,
-    term:"April",
-    definition:"it's the fourth month of the year."
-},
-{
-	id: 5,
-    term: "May",
-    definition: "it's the fifth month of the year."
-},
-{
-	
-    id: 6,
-    term:"June",
-    definition:"it's the sixth month of the year."
-},
-{
-	id: 7,
-    term: "July",
-    definition: "it's the seventh month of the year."
-},
-{
-	
-    id: 8,
-    term:"AUgust",
-    definition:"it's the eighth month of the year."
-},
-{
-	id: 9,
-    term: "September",
-    definition: "it's the ninth month of the year."
-},
-{
-	
-    id: 10,
-    term:"October",
-    definition:"it's the tenth month of the year."
-},
-{
-	id: 11,
-    term: "November",
-    definition: "it's the eleventh month of the year."
-},
-{
-	
-    id: 12,
-    term:"December",
-    definition:"it's the twelfth month of the year"
-}]
+			"id": 1,
+			"term": "January",
+			"definition": "it's the first month of the year."
+		},
+		{
+
+			"id": 2,
+			"term": "February",
+			"definition": "it's the third month of the year."
+		},
+		{
+			"id": 3,
+			"term": "March",
+			"definition": "First month of the year"
+		},
+		{
+
+			"id": 4,
+			"term": "April",
+			"definition": "it's the fourth month of the year."
+		},
+		{
+			"id": 5,
+			"term": "May",
+			"definition": "it's the fifth month of the year."
+		},
+		{
+
+			"id": 6,
+			"term": "June",
+			"definition": "it's the sixth month of the year."
+		},
+		{
+			"id": 7,
+			"term": "July",
+			"definition": "it's the seventh month of the year."
+		},
+		{
+
+			"id": 8,
+			"term": "AUgust",
+			"definition": "it's the eighth month of the year."
+		},
+		{
+			"id": 9,
+			"term": "September",
+			"definition": "it's the ninth month of the year."
+		},
+		{
+
+			"id": 10,
+			"term": "October",
+			"definition": "it's the tenth month of the year."
+		},
+		{
+			"id": 11,
+			"term": "November",
+			"definition": "it's the eleventh month of the year."
+		},
+		{
+
+			"id": 12,
+			"term": "December",
+			"definition": "it's the twelfth month of the year"
+		}
+	]
 }

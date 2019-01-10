@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FlashcardsService } from 'src/app/services/flashcards/flashcards.service';
+import { Flashcard } from 'src/app/models/flashcard';
+import { FlashcardSet } from 'src/app/models/flashcardset';
 
 @Component({
   selector: 'app-flash-card',
@@ -8,11 +11,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FlashCardComponent implements OnInit {
 
   flipped = false;
-
-
-  constructor() { }
+  flashCards:Array<Flashcard>;
+  flashcardSet:FlashcardSet;
+  constructor(private flashcardService:FlashcardsService) { }
 
   ngOnInit() {
+
+   this.flashcardService.getAllCards(1).subscribe(set=>{
+     this.flashcardSet=set;
+     console.log(this.flashcardSet);
+
+    });
   }
 
   toggle(event) {
