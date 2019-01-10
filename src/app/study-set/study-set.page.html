@@ -14,21 +14,22 @@
 
     <app-flash-card [flashCard]="flashCard">
     </app-flash-card>
-    <div style="width:300px">
+    <div class="navigation-container">
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <span text-center center>
-                                <ion-text>Progress</ion-text>
-                                <ion-text>{{current_index + 1}}/{{total_count}}</ion-text>
+                    <span float-left>
+                            <button ion-button icon-only class="leftButton" 
+                            (click)="previous()" >
+                                        <ion-icon name="arrow-dropleft-circle" ></ion-icon>
+                                      </button>
                             </span>
                 </ion-col>
+                <ion-col text-center center>
+                    <span><ion-badge color="dark">{{current_index + 1}}/{{total_count}}</ion-badge></span>
+                </ion-col>
                 <ion-col>
-                    <span text-end>
-                                <button ion-button icon-only class="leftButton" 
-                                (click)="previous()" >
-                                            <ion-icon name="arrow-dropleft-circle" ></ion-icon>
-                                          </button>
+                    <span float-right>
                                 <button ion-button icon-only (click)="forward()">
                                 <ion-icon name="arrow-dropright-circle"></ion-icon>
                             </button>
