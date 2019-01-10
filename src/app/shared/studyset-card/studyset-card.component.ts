@@ -14,4 +14,8 @@ export class StudysetCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  navigateToStudySet(id: number) {
+    console.log('Study set clicked ' + id);
+  }
+
 }
