@@ -5,7 +5,7 @@
             <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
         <ion-title text-center>
-            <ion-text text-center>Study Set</ion-text>
+            <ion-text text-center>{{quiz_title}}</ion-text>
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -19,7 +19,7 @@
                 <ion-col>
                     <span text-center center>
                                 <ion-text>Progress</ion-text>
-                                <ion-text>1/6</ion-text>
+                                <ion-text>1/{{total_count}}</ion-text>
                             </span>
                 </ion-col>
                 <ion-col>

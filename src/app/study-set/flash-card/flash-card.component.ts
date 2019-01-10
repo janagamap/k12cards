@@ -11,17 +11,11 @@ import { FlashcardSet } from 'src/app/models/flashcardset';
 export class FlashCardComponent implements OnInit {
 
   flipped = false;
-  flashCards:Array<Flashcard>;
-  flashcardSet:FlashcardSet;
-  constructor(private flashcardService:FlashcardsService) { }
+  flashCards: Array<Flashcard>;
+  flashcardSet: FlashcardSet;
+  constructor() { }
 
   ngOnInit() {
-
-   this.flashcardService.getAllCards(1).subscribe(set=>{
-     this.flashcardSet=set;
-     console.log(this.flashcardSet);
-
-    });
   }
 
   toggle(event) {
