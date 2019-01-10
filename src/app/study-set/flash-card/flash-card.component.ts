@@ -13,6 +13,8 @@ export class FlashCardComponent implements OnInit {
   flipped = false;
   flashCards: Array<Flashcard>;
   flashcardSet: FlashcardSet;
+
+  @Input() flashCard: Flashcard;
   constructor() { }
 
   ngOnInit() {

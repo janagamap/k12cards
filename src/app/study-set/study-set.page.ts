@@ -16,18 +16,28 @@ export class StudySetPage implements OnInit {
 
   quiz_title: String;
   total_count: number;
-
+  current_index = 0;
+  flashCard: Flashcard = {id: 0, term: '', definition: ''};
   constructor(private flashcardService: FlashcardsService) { }
   ngOnInit() {
   }
 
-   ionViewDidEnter() {
-     this.flashcardService.getAllCards(1).subscribe(set => {
+   async ionViewDidEnter() {
+     await this.flashcardService.getAllCards(1).subscribe(set => {
       this.flashcardSet = set;
      console.log(this.flashcardSet);
      this.quiz_title = set.quizTitle;
      this.total_count = set.flashcards.length;
+     this.flashCard = set.flashcards[0];
     });
+  }
+
+  previous() {
+    console.log('previous fn clicked');
+  }
+
+  forward() {
+    console.log('forward fn clicked');
   }
 
 }
