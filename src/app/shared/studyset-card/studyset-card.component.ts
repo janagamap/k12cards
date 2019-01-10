@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class StudysetCardComponent implements OnInit {
 
+
   constructor(private router: Router) { }
   @Input() studyset: Studyset;
 
@@ -18,6 +19,7 @@ export class StudysetCardComponent implements OnInit {
   navigateToStudySet(id: number) {
     console.log('Study set clicked ' + id);
     this.router.navigateByUrl('/study-set/' + id);
+
   }
 
 }

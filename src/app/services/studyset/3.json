@@ -15,7 +15,7 @@
 {
 	"id":3,
     "term": "Communication competence    ",
-    "definition": "the ability to effectively and appropriately interact in any given situation    ",
+    "definition": "the ability to effectively and appropriately interact in any given situation    "
 },
 {
 	
@@ -26,6 +26,6 @@
 {
 	"id": 5,
     "term": "Encoding",
-    "definition": "the process of creating a message using symbols    ",
+    "definition": "the process of creating a message using symbols    "
 }]
 }
