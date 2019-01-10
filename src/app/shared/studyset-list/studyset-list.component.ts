@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {StudysetCardComponent} from '../studyset-card/studyset-card.component';
+import { StudysetService } from 'src/app/services/studyset/studyset.service';
+import { Studyset } from 'src/app/models/studyset';
 
 @Component({
   selector: 'app-studyset-list',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudysetListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private studySetListService: StudysetService ) {
+    this.getAvailableStudySets();
+  }
+  studySets: Array<Studyset>;
 
   ngOnInit() {
+  }
+
+   getAvailableStudySets() {
+    console.log('View entered');
+    this.studySets =  this.studySetListService.getAllavailableStudySets();
+    console.log('View after service');
   }
 
 }
