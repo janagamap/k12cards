@@ -1,3 +1,9 @@
-<app-studyset-card *ngFor="let studySet of studySets" [studyset]="studySet">
+<ion-grid>
+    <ion-row justify-content: space-around>
+        <ion-col col-3 col-md-3 col-xl-1 *ngFor="let studySet of studySets">
+            <app-studyset-card [studyset]="studySet">
 
-</app-studyset-card>
+            </app-studyset-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>
