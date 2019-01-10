@@ -1,25 +1,29 @@
-<button (click)="toggle()">flip the card</button>
 <section class="container">
     <div class="card" (click)="toggle()" [ngClass]="{'flipped': flipped}">
         <div class="front">
-            <ion-card>
-                <ion-card-header color="primary">
 
-                    <ion-card-subtitle text-center>What is the capital city of Canada?</ion-card-subtitle>
-                </ion-card-header>
+            <!-- <ion-card>
+        <ion-card-header color="primary">
+          What is the capital city of Canada?
+        </ion-card-header>
+      </ion-card> -->
 
+            <ion-text color="primary">
+                <h2>What is the capital city of Canada?</h2>
+            </ion-text>
 
-            </ion-card>
 
         </div>
         <div class="back">
-            <ion-card>
-                <ion-card-header color="primary">
+            <!-- <ion-card>
+        <ion-card-header color="primary">
+          Ottawa
+        </ion-card-header>
+      </ion-card> -->
 
-                    <ion-card-subtitle text-center>Ottawa</ion-card-subtitle>
-                </ion-card-header>
-
-            </ion-card>
+            <ion-text color="secondary">
+                <h2>Ottawa</h2>
+            </ion-text>
 
         </div>
     </div>
