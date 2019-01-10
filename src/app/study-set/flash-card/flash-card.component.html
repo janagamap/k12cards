@@ -3,28 +3,28 @@
     <div class="card" (click)="toggle()" [ngClass]="{'flipped': flipped}">
         <div class="front">
 
-            <!-- <ion-card>
-        <ion-card-header color="primary">
-          What is the capital city of Canada?
-        </ion-card-header>
-      </ion-card> -->
+            <ion-card>
+                <ion-card-header text-wrap color="primary">
+                    {{flashCard.definition}}
+                </ion-card-header>
+            </ion-card>
 
-            <ion-text color="primary">
+            <!-- <ion-text color="primary">
                 <h2>{{flashCard.definition}}</h2>
-            </ion-text>
+            </ion-text> -->
 
 
         </div>
         <div class="back">
-            <!-- <ion-card>
-        <ion-card-header color="primary">
-          Ottawa
-        </ion-card-header>
-      </ion-card> -->
+            <ion-card>
+                <ion-card-header text-wrap color="primary">
+                    {{flashCard.term}}
+                </ion-card-header>
+            </ion-card>
 
-            <ion-text color="secondary">
+            <!-- <ion-text color="secondary">
                 <h2>{{flashCard.term}}</h2>
-            </ion-text>
+            </ion-text> -->
 
         </div>
     </div>
