@@ -28,16 +28,37 @@ export class StudySetPage implements OnInit {
      console.log(this.flashcardSet);
      this.quiz_title = set.quizTitle;
      this.total_count = set.flashcards.length;
+     this.flashCards = set.flashcards;
      this.flashCard = set.flashcards[0];
     });
   }
 
+  private incrementCurrentIndex () {
+    if (this.current_index < this.total_count) {
+      this.current_index = this.current_index + 1;
+    }
+  }
+
+  private decrementCurrentIndex() {
+    if (this.current_index >= 1) {
+      this.current_index = this.current_index - 1;
+    }
+  }
+
   previous() {
-    console.log('previous fn clicked');
+    console.log('previous function: ' + this.current_index);
+    this.decrementCurrentIndex();
+    this.flashCard =  this.flashCards[this.current_index];
+    console.log('previous fn clicked' + this.current_index );
   }
 
   forward() {
-    console.log('forward fn clicked');
+    console.log('forward fn clicked' + this.current_index );
+    this.incrementCurrentIndex();
+   if ( this.current_index < this.total_count) {
+    this.flashCard =  this.flashCards[this.current_index];
+   }
+    console.log('forward fn clicked' + this.current_index );
   }
 
 }
