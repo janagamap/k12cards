@@ -20,7 +20,10 @@ export class StudysetListComponent implements OnInit {
 
    getAvailableStudySets() {
     console.log('View entered');
-    this.studySets =  this.studySetListService.getAllavailableStudySets();
+    this.studySetListService.getAllavailableStudySets().subscribe(sets=>{
+      this.studySets=sets;
+      console.log(this.studySets);
+    });
     console.log('View after service');
   }
 

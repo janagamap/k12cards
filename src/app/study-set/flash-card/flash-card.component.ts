@@ -20,6 +20,8 @@ export class FlashCardComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
   @Input() toggle() {
     console.log('event: ' + event);
     console.log('About to flip:' + this.flipped);

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Flashcard } from '../models/flashcard';
 import { FlashcardSet } from '../models/flashcardset';
 import { FlashcardsService } from '../services/flashcards/flashcards.service';
+import { Subscription } from 'rxjs';
+import { StudysetCardComponent } from '../shared/studyset-card/studyset-card.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-study-set',
@@ -16,23 +19,48 @@ export class StudySetPage implements OnInit {
 
   quiz_title: String;
   total_count: number;
+
+  private subscription: Subscription;
+  id: number;
+  private sub: any;
+
+  constructor(private flashcardService: FlashcardsService, private route: ActivatedRoute) { }
+
   current_index = 0;
   flashCard: Flashcard = {id: 0, term: '', definition: ''};
-  constructor(private flashcardService: FlashcardsService) { }
+
+
   ngOnInit() {
+
+    this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id']; // (+) converts string 'id' to a number
+      this.getData(this.id)
+      // In a real app: dispatch action to load the details here.
+    }
+    );
   }
 
-   async ionViewDidEnter() {
-     await this.flashcardService.getAllCards(1).subscribe(set => {
+
+  ionViewDidEnter() {
+    this.getData(this.id);
+    
+  }
+  private getData(id: number) {
+    this.flashcardService.getAllCards(id).subscribe(set => {
       this.flashcardSet = set;
-     console.log(this.flashcardSet);
-     this.quiz_title = set.quizTitle;
-     this.total_count = set.flashcards.length;
-     this.flashCards = set.flashcards;
+      console.log(this.flashcardSet);
+      this.quiz_title = set.quizTitle;
+      this.total_count = set.flashcards.length;
+       this.flashCards = set.flashcards;
      this.flashCard = set.flashcards[0];
     });
   }
 
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.sub.unsubscribe();
+
+   
   private incrementCurrentIndex () {
     if (this.current_index < this.total_count) {
       this.current_index = this.current_index + 1;
@@ -59,6 +87,7 @@ export class StudySetPage implements OnInit {
     this.flashCard =  this.flashCards[this.current_index];
    }
     console.log('forward fn clicked' + this.current_index );
+
   }
 
 }

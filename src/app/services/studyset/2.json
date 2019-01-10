@@ -1,59 +1,58 @@
-{
-    quiz_title:"English Comp",
-    terms:[{
+{ "quiz_title":"English Comprehension Terms",
+    "terms":[{
 
-	id:1,
-    term: "Flashback",
-    definition: "The narrative switches to an earlier point in time"
+	"id":1,
+    "term": "Flashback",
+    "definition": "The narrative switches to an earlier point in time"
 },
 {
 	
-    id:2,
-    term:"critique",
-    definition:"A critical analysis which follows a recognized pattern of discernment"
+    "id":2,
+    "term":"critique",
+    "definition":"A critical analysis which follows a recognized pattern of discernment"
 },
 {
-	id:3,
-    term: "Drama",
-    definition: "A story portrayed as a line event"
-},
-{
-	
-    id: 4,
-    term:"Poetry",
-    definition:"Considered feeling in highly structured language?"
-},
-{
-	id: 5,
-    term: "Fiction",
-    definition: "a story in which the facts are not necessarily true"
+	"id":3,
+    "term": "Drama",
+    "definition": "A story portrayed as a line event"
 },
 {
 	
-    id: 6,
-    term:"nonfiction",
-    definition:"a narrative based on historical facts"
+    "id": 4,
+    "term":"Poetry",
+    "definition":"Cons\"id\"ered feeling in highly structured language?"
 },
 {
-	id: 7,
-    term: "Historical novel",
-    definition: "A novel in which the setting is true to a particular time period    "
+	"id": 5,
+    "term": "Fiction",
+    "definition": "a story in which the facts are not necessarily true"
 },
 {
 	
-    id: 8,
-    term:"Redundancy",
-    definition:"unnecessarily repetitive"
+    "id": 6,
+    "term":"nonfiction",
+    "definition":"a narrative based on historical facts"
 },
 {
-	id: 9,
-    term: "bibliography",
-    definition: "A complete or selective list of works complied upon some common principals"
+	"id": 7,
+    "term": "Historical novel",
+    "definition": "A novel in which the setting is true to a particular time period    "
+},
+{
+	
+    "id": 8,
+    "term":"Redundancy",
+    "definition":"unnecessarily repetitive"
+},
+{
+	"id": 9,
+    "term": "bibliography",
+    "definition": "A complete or selective list of works complied upon some common principals"
 },
 {
 
-    id: 10,
-    term:"annotated bibliography",
-    definition:"a record of books and outside references with citations of importance of topic"
+    "id": 10,
+    "term":"annotated bibliography",
+    "definition":"a record of books and outs\"id\"e references with citations of importance of topic"
 }]
 }

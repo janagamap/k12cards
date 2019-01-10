@@ -1,0 +1,18 @@
+[{
+    "id": 1,
+    "title": "Months",
+    "description": "Noun. Also called calendar month. any of the twelve parts, as January or February, into which the calendar year is divided. the time from any day of one calendar month to the corresponding day of the next. a period of four weeks or 30 days.",
+    "items":12
+},
+{
+    "id": 2,
+    "title": "English Comprehension Terms",
+    "description": "Reading comprehension is the ability to process text, understand its meaning, and to integrate with what the reader already knows. Fundamental skills required in efficient reading comprehension are knowing meaning of words, ..... English Reading Comprehension Skills, Andrews University; Vocabulary Instruction.",
+    "items":5
+},
+{
+    "id": 3,
+    "title": "Communication terms",
+    "description": "Terms Related to Communication. ... Aural-Oral: A communication method in which listening is the primary means of understanding language and speech (talking) is the primary means of expressing language.",
+    "items":4
+}]
