@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Flashcard } from '../models/flashcard';
 import { FlashcardSet } from '../models/flashcardset';
 import { FlashcardsService } from '../services/flashcards/flashcards.service';
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './study-set.page.html',
   styleUrls: ['./study-set.page.scss'],
 })
-export class StudySetPage implements OnInit {
+export class StudySetPage implements OnInit, OnDestroy {
 
 
   flashCards: Array<Flashcard>;
@@ -43,7 +43,6 @@ export class StudySetPage implements OnInit {
 
   ionViewDidEnter() {
     this.getData(this.id);
-    
   }
   private getData(id: number) {
     this.flashcardService.getAllCards(id).subscribe(set => {
@@ -59,8 +58,8 @@ export class StudySetPage implements OnInit {
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
     this.sub.unsubscribe();
+  }
 
-   
   private incrementCurrentIndex () {
     if (this.current_index < this.total_count) {
       this.current_index = this.current_index + 1;
