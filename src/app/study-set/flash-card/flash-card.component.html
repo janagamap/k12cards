@@ -1,0 +1,31 @@
+<button (click)="toggle()">flip the card</button>
+<section class="container">
+    <div class="card" (click)="toggle()" [ngClass]="{'flipped': flipped}">
+        <div class="front">
+            <ion-card>
+                <ion-card-header color="primary">
+                    <ion-card-title text-center>Title 1 </ion-card-title>
+                    <ion-card-subtitle text-center>Sub title</ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Definition
+                </ion-card-content>
+            </ion-card>
+
+        </div>
+        <div class="back">
+            <ion-card>
+                <ion-card-header color="primary">
+                    <ion-card-title text-center>Question </ion-card-title>
+
+                </ion-card-header>
+
+                <ion-card-content>
+                    Item
+                </ion-card-content>
+            </ion-card>
+
+        </div>
+    </div>
+</section>

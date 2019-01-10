@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { StudySetPage } from './study-set.page';
+import { FlashCardComponent } from './flash-card/flash-card.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StudySetPage]
+  declarations: [StudySetPage, FlashCardComponent]
 })
 export class StudySetPageModule {}
