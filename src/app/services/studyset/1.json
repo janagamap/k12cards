@@ -10,12 +10,12 @@
 
 			"id": 2,
 			"term": "February",
-			"definition": "it's the third month of the year."
+			"definition": "it's the second month of the year."
 		},
 		{
 			"id": 3,
 			"term": "March",
-			"definition": "First month of the year"
+			"definition": "it's the third month of the year."
 		},
 		{
 
@@ -65,7 +65,7 @@
 
 			"id": 12,
 			"term": "December",
-			"definition": "it's the twelfth month of the year"
+			"definition": "it's the twelth month of the year"
 		}
 	]
 }
