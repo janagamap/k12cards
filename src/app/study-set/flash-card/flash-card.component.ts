@@ -13,12 +13,17 @@ export class FlashCardComponent implements OnInit {
   flipped = false;
   flashCards: Array<Flashcard>;
   flashcardSet: FlashcardSet;
+
+  @Input() flashCard: Flashcard;
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggle() {
+
+
+  @Input() toggle() {
+    console.log('event: ' + event);
     console.log('About to flip:' + this.flipped);
     this.flipped = !this.flipped;
     console.log('Flipped:' + this.flipped);
