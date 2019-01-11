@@ -32,7 +32,7 @@
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 140px;
+    font-size: 120px;
     position: absolute;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -41,10 +41,10 @@
 }
 
 .card .front {
-    background: #d4a4a4;
     margin: 0 auto;
     border-style: outset;
     border-radius: 12px;
+    background: #085a9e;
 }
 
 .card .back {
@@ -52,7 +52,8 @@
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
-    border-radius: 12px;
+    border-radius: 10px;
+    min-height: 280px;
 }
 
 .card.flipped {
@@ -78,6 +79,14 @@
 
 .definitionStyle {
     margin-top: 100px;
+    color: #ffffff;
+}
+
+.termStyle {
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #777777;
 }
 
 .definitionText {
