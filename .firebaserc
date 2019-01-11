@@ -1,5 +1,6 @@
 {
   "projects": {
-    "prod": "k12-flashcards"
+    "prod": "k12-flash-cards",
+    "default": "k12-flash-cards"
   }
 }
