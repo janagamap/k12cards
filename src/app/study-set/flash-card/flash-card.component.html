@@ -3,15 +3,15 @@
     <div class="card" (click)="toggle()" [ngClass]="{'flipped': flipped}">
         <div class="front">
 
-            <ion-card>
-                <ion-card-header color="primary" class="ion-card-header">
+            <!-- <ion-card>
+                <ion-card-header color="primary" class="ion-card-header" text-left>
                     {{flashCard.definition}}
                 </ion-card-header>
-            </ion-card>
+            </ion-card> -->
 
-            <!-- <ion-text color="primary">
-                <h2>{{flashCard.definition}}</h2>
-            </ion-text> -->
+            <ion-text color="primary" class="definitionStyle" text-center>
+                <h2 class="definitionStyle">{{flashCard.definition}}</h2>
+            </ion-text>
 
 
         </div>
@@ -32,5 +32,5 @@
 
 </section>
 <div class="refresh" text-center>
-    <button ion-button icon-start (click)="toggle()"><ion-icon name="refresh"> </ion-icon>Flip Card </button>
+    <button ion-button icon-start (click)="toggle()"><ion-icon name="refresh" class="refresh-button"> </ion-icon> </button>
 </div>

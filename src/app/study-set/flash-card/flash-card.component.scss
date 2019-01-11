@@ -40,14 +40,19 @@
     backface-visibility: hidden;
 }
 
-// .card .front {
-//     background: white;
-// }
+.card .front {
+    background: #d4a4a4;
+    margin: 0 auto;
+    border-style: outset;
+    border-radius: 12px;
+}
+
 .card .back {
     -webkit-transform: rotateY( 180deg);
     -moz-transform: rotateY( 180deg);
     -o-transform: rotateY( 180deg);
     transform: rotateY( 180deg);
+    border-radius: 12px;
 }
 
 .card.flipped {
@@ -63,6 +68,26 @@
     margin: 30px auto 0 auto;
 }
 
+.refresh-button {
+    font-size: 40px;
+}
+
 .ion-card-header {
     max-height: 300px;
+}
+
+.definitionStyle {
+    margin-top: 100px;
+}
+
+.definitionText {
+    margin-top: 100px;
+}
+
+.progress {
+    margin-top: 5px;
+}
+
+.progress .ion-badge {
+    margin-top: 11px;
 }
