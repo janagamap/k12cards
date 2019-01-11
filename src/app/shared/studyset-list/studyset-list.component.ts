@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {StudysetCardComponent} from '../studyset-card/studyset-card.component';
 import { StudysetService } from 'src/app/services/studyset/studyset.service';
 import { Studyset } from 'src/app/models/studyset';
+import { NetworkService } from 'src/app/services/network/network.service';
 
 @Component({
   selector: 'app-studyset-list',
@@ -10,7 +11,7 @@ import { Studyset } from 'src/app/models/studyset';
 })
 export class StudysetListComponent implements OnInit {
 
-  constructor(private studySetListService: StudysetService ) {
+  constructor(private studySetListService: StudysetService,public network: NetworkService ) {
     this.getAvailableStudySets();
   }
   studySets: Array<Studyset>;

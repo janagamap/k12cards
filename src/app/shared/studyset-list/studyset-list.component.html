@@ -1,5 +1,7 @@
 <ion-grid>
     <ion-row>
+            <div *ngIf="!network.onLine">Warning: network is offline, data may be stale</div>
+
         <ion-col col-sm-12 col-md-12 col-lg-4 col-xl-4 *ngFor="let studySet of studySets">
             <app-studyset-card [studyset]="studySet">
 
