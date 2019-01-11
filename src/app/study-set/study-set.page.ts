@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild} from '@angular/core';
 import { Flashcard } from '../models/flashcard';
 import { FlashcardSet } from '../models/flashcardset';
 import { FlashcardsService } from '../services/flashcards/flashcards.service';
 import { Subscription } from 'rxjs';
 import { StudysetCardComponent } from '../shared/studyset-card/studyset-card.component';
 import { ActivatedRoute } from '@angular/router';
+import { FlashCardComponent } from './flash-card/flash-card.component';
 
 @Component({
   selector: 'app-study-set',
@@ -28,13 +29,14 @@ export class StudySetPage implements OnInit, OnDestroy {
 
   current_index = 0;
   flashCard: Flashcard = {id: 0, term: '', definition: ''};
-
+  
+  @ViewChild('flashcardcomponent') flashCardComp: FlashCardComponent;
 
   ngOnInit() {
 
     this.sub = this.route.params.subscribe(params => {
       this.id = +params['id']; // (+) converts string 'id' to a number
-      this.getData(this.id)
+      this.getData(this.id);
       // In a real app: dispatch action to load the details here.
     }
     );
@@ -62,6 +64,7 @@ export class StudySetPage implements OnInit, OnDestroy {
 
   private incrementCurrentIndex () {
     if (this.current_index < this.total_count) {
+      this.flashCardComp.flipped = false;
       this.current_index = this.current_index + 1;
     }
   }
@@ -76,16 +79,17 @@ export class StudySetPage implements OnInit, OnDestroy {
     console.log('previous function: ' + this.current_index);
     this.decrementCurrentIndex();
     this.flashCard =  this.flashCards[this.current_index];
+    this.flashCardComp.flipped = false;
     console.log('previous fn clicked' + this.current_index );
   }
 
   forward() {
-    console.log('forward fn clicked' + this.current_index );
+    console.log('forward fn clicked forward start' + this.current_index );
     this.incrementCurrentIndex();
    if ( this.current_index < this.total_count) {
     this.flashCard =  this.flashCards[this.current_index];
    }
-    console.log('forward fn clicked' + this.current_index );
+    console.log('forward fn clicked forward end' + this.current_index );
 
   }
 
