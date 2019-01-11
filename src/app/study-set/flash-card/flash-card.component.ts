@@ -22,7 +22,7 @@ export class FlashCardComponent implements OnInit {
 
 
 
-  @Input() toggle() {
+ toggle() {
     console.log('event: ' + event);
     console.log('About to flip:' + this.flipped);
     this.flipped = !this.flipped;
